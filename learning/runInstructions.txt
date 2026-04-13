@@ -1,0 +1,12 @@
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+
+powershell -ExecutionPolicy Bypass -File .\dev-workstation-bootstrap-enterprise.ps1 -ContinueOnError -EnableTranscriptLogging
+
+
+powershell -ExecutionPolicy Bypass -File .\dev-workstation-bootstrap-enterprise.ps1 -InventoryOnly
+
+powershell -ExecutionPolicy Bypass -File .\dev-workstation-bootstrap-enterprise.ps1 -DryRun
+
+
+powershell -ExecutionPolicy Bypass -File .\dev-workstation-bootstrap-enterprise.ps1 -KeepHyperV -KeepIIS
